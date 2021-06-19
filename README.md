@@ -295,6 +295,16 @@ Read [iOS documentation](https://developers.google.com/identity/sign-in/ios/back
 
 Read [iOS documentation](https://developers.google.com/identity/sign-in/ios/offline-access) and [Android documentation](https://developers.google.com/identity/sign-in/android/offline-access) for more information.
 
+## Jest module mock
+
+If you use Jest for testing, you may need to mock the functionality of this native module. This library ships with a Jest mock that you can add to the `setupFiles` array in the Jest config. By default, it behaves as if the calls were successful and returns mock user data.
+
+```
+"setupFiles": [
+ "./node_modules/react-native-google-signin/jest/RNGoogleSigninMock.js"
+],
+```
+
 ## Additional scopes
 
 The default requested scopes are `email` and `profile`.
